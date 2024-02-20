@@ -1,23 +1,11 @@
 "use client"
 
 import {FC, JSX, useState} from "react";
-import {
-    Navbar,
-    NavbarBrand,
-    NavbarContent,
-    NavbarItem,
-    Link,
-    Button,
-    NavbarMenuToggle,
-    NavbarMenu,
-    NavbarMenuItem
-} from "@nextui-org/react";
 import {useSidebar} from "@/hooks/useSidebar";
 import {motion} from "framer-motion";
 import {useThemeContext} from "@/hooks/useThemeContext";
 
 const Sidebar: FC = (): JSX.Element => {
-    const {isMenuOpen, setIsMenuOpen} = useSidebar();
     const {theme} = useThemeContext();
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -25,45 +13,8 @@ const Sidebar: FC = (): JSX.Element => {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
-    const menuItems = [
-        "Profile",
-        "Dashboard",
-        "Activity",
-        "Analytics",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
-        "Help & Feedback",
-        "Log Out",
-    ];
     return (
         <aside>
-            {/*<Navbar onMenuOpenChange={setIsMenuOpen} maxWidth={"full"}>*/}
-            {/*    <NavbarContent>*/}
-            {/*        <NavbarMenuToggle*/}
-            {/*            aria-label={isMenuOpen ? "Close menu" : "Open menu"}*/}
-            {/*            // className="sm:hidden"*/}
-            {/*        />*/}
-            {/*    </NavbarContent>*/}
-            {/*    <NavbarMenu>*/}
-            {/*        {menuItems.map((item, index) => (*/}
-            {/*            <NavbarMenuItem key={`${item}-${index}`}>*/}
-            {/*                <Button*/}
-            {/*                    color={*/}
-            {/*                        index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"*/}
-            {/*                    }*/}
-            {/*                    className="w-2/12"*/}
-            {/*                    href="#"*/}
-            {/*                    size="lg"*/}
-            {/*                >*/}
-            {/*                    {item}*/}
-            {/*                </Button>*/}
-            {/*            </NavbarMenuItem>*/}
-            {/*        ))}*/}
-            {/*    </NavbarMenu>*/}
-            {/*</Navbar>*/}
-
             <motion.div
                 className={`${theme} h-full text-white z-10 md:flex md:flex-col hidden ${isSidebarOpen ? 'w-250px' : 'w-100px'}`}
                 initial={{ width: 250 }}

@@ -1,6 +1,5 @@
 import React from "react";
 import {useThemeContext} from "@/hooks/useThemeContext";
-import theme from "tailwindcss/defaultTheme";
 
 const MyLogo = () => {
     const {theme} = useThemeContext()

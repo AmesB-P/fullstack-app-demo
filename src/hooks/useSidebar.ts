@@ -1,4 +1,4 @@
-import {useCallback, useContext} from "react";
+import {useContext} from "react";
 import {SidebarContext} from "@/context/SidebarContext";
 
 

@@ -1,8 +1,7 @@
 "use client"
 
-import {FC, JSX, useContext} from "react";
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Button} from "@nextui-org/react";
-import {useThemeContext} from "@/hooks/useThemeContext";
+import {FC, JSX} from "react";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@nextui-org/react";
 
 const Products : FC = () : JSX.Element => {
 
