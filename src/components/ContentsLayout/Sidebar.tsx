@@ -1,7 +1,6 @@
 "use client"
 
 import {FC, JSX, useState} from "react";
-import {useSidebar} from "@/hooks/useSidebar";
 import {motion} from "framer-motion";
 import {useThemeContext} from "@/hooks/useThemeContext";
 
